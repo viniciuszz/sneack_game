@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        overflow: hidden;
+    }
+    .content{
+    text-align: center;
+    
+    }
+    h1{
+        animation: word_animation 4s infinite;
+        
+    }
+    .cubo{
+        width: 50px;
+        height: 50px;
+        position: relative;
+       
+    }
+    .cubos{
+        width: 100%;
+       
+    
+    }
+    .cubo1{
+        background-color: white;
+        animation: cubo_animation1 5s infinite;
+    }
+    .cubo2{
+        left:400px;
+        background-color: white;
+        animation: cubo_animation2 5s infinite;
+    }
+     .cubo3{ 
+       left: 320px; 
+       background-color: white;
+       animation: cubo_animation3 5s infinite;
+    }
+    .cubo4{ 
+       left: 300px; 
+       background-color: white;
+       animation: cubo_animation4 5s infinite;
+    }
+
+   @keyframes word_animation {
+    0% {color: aqua;}
+            25%{color: aquamarine;  }
+            50%{color: azure; }
+            75%{color: yellowgreen;}
+            100%{color: rebeccapurple; }
+   }
+   @keyframes cubo_animation1 {
+    0% {background-color: aqua; left: 10px; top: 450px;}
+            25%{background-color: rgb(252, 252, 252); left: 300px ; top:400px; }
+            50%{background-color: azure; left: 350px ; top: 350px;}
+            75%{background-color: yellowgreen;left: 400px ; top:350px;}
+            100%{background-color: rebeccapurple;left: 450px ; top: 0px;}
+   }
+   @keyframes cubo_animation2 {
+    0% {background-color: rgb(30, 0, 255); right:400px ; top: 40px;}
+            25%{background-color: aquamarine; right: 450px ; top:0px; }
+            50%{background-color: rgb(3, 243, 243); right: 500px ; top: 200px;}
+            75%{background-color: rgb(255, 255, 255);right:550px; top:200px;}
+            100%{background-color: rebeccapurple; right: 600px ; top: 0px;}
+   }
+   @keyframes cubo_animation3 {
+    0% {background-color: rgb(30, 0, 255); left:200px ; top: 70px;}
+            25%{background-color: rgb(251, 0, 0); left: 250px ; top:100px; }
+            50%{background-color: rgb(14, 106, 106); left: 350px ; top: 200px;}
+            75%{background-color: rgb(253, 253, 253);left:400px; top:200px;}
+            100%{background-color: rebeccapurple; left: 450px ; top: 0px;}
+   }
+   @keyframes cubo_animation4 {
+    0% {background-color: rgb(30, 0, 255); left:250px ; top: 70px;}
+            25%{background-color: rgb(0, 255, 170); left: 250px ; top:100px; }
+            50%{background-color: rgb(243, 3, 151); left: 350px ; top: 200px;}
+            75%{background-color: rgb(255, 255, 255);left:400px; top:150px;}
+            100%{background-color: rebeccapurple; left: 500px ; top: -100px;}
+   }
+
+</style>
+<body>
+    
+    <div class="content">
+        <h1>Sneak game</h1>
+    <button onclick="play()">Play game</button>
+</div>
+<div class="cubos">
+<div class="cubo cubo1"></div>
+<div class="cubo cubo2"></div>
+<div class="cubo cubo3"></div>
+<div class="cubo cubo4"></div>
+
+</div>
+</body>
+</html>
+<script>
+    function play(){
+        window.location.href = "game.html";
+    }
+</script>
