@@ -114,7 +114,7 @@ const moveSnake = () => {
     if (!direction) return
 
     const head = snake[snake.length - 1]
-
+    //move a cobra com base na posisão da cabeça
     if (direction == "right") {
         snake.push({ x: head.x + size, y: head.y })
     }
@@ -156,7 +156,7 @@ const drawGrid = () => {
     }
 }
 
-
+//function pricipal que inicia o jogo
 const gameLoop = () => {
     clearInterval(loopid)
     ctx.clearRect(0,0,600, 600)
@@ -166,6 +166,7 @@ const gameLoop = () => {
     drawSnake()
     drawfood()
     drawGrid()
+    //cria um intervalo de tempo para que o canvas apague e desenhe novamente, dimuindo ou aumentando a velocidade da cobra 
     loopid = setInterval(() =>
 {
     gameLoop()
@@ -190,7 +191,22 @@ document.addEventListener("keydown", ({ key }) => {
         direction = "up"
     }
 })
+//functions de movimentasão da cobra para mobile
+function right(){
+    direction = "right"
+}
 
+function left(){
+    direction = "left"
+}
+function up(){
+    direction = "up"
+}
+function down(){
+    direction = "down"
+}
+
+//fuction para o replay do jogo zera o placar 
 buttonPlay.addEventListener("click", () => {
     score.innerText = "00"
     menu.style.display = "none"
