@@ -19,6 +19,8 @@ body {
 
 canvas {
     background-color: #111;
+   
+    
 }
 
 .score {
@@ -67,4 +69,32 @@ canvas {
     justify-content: center;
     gap: 5px;
     cursor: pointer;
+}
+
+
+.mobile_controls{
+    display: none;
+    position: absolute;
+    left: 200px;
+}
+
+@media only screen and (max-width:900px){
+    canvas {
+        background-color: #111;
+        width: 60%;
+    }
+  
+    
+    .mobile_controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 200px;
+        bottom: 40px;
+    }
+
+    .btn_mobile{
+        margin: 5px;
+    }
 }
